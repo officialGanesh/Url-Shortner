@@ -8,3 +8,6 @@ Building my first fully functional web app using Javascript 🚀
 #### > NodeJS
 #### > Express
 #### > Mongoose, MongoDB 🔥
+
+##### Special Thanks to kyle(from web dev simplified)
+[video] (https://youtu.be/SLpUKAGnm-g)
