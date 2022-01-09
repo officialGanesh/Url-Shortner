@@ -55,8 +55,8 @@
     <div class="container">
 
         <h1>Url-Shortner</h1>
-        <form action="">
-            <input class="form-control form-control-lg" type="url" placeholder="Enter Url">
+        <form action="shortUrl" method="POST">
+            <input class="form-control form-control-lg" type="url" placeholder="Enter Url" name="fullUrl">
             <button class="btn btn-lg  btn-success " id="makeUrlShort">GO</button>
         </form>
         <h2>Available Short Urls 🚀</h2>
@@ -70,11 +70,15 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><a href="https://getbootstrap.com/docs/5.1/content/tables/">https://getbootstrap.com/docs/5.1/content/tables/</a></td>
-                <td><a href="/6789">6789</a></td>
-                <td>10</td>
-              </tr>
+                <% shortUrls.forEach(shortUrl => {%>
+                
+                    <tr>
+                      <td><a href=" <%= shortUrl.full %> "><%= shortUrl.full %> </a></td>
+                      <td><a href=" <%= shortUrl.short %> "><%= shortUrl.short %> </a></td>
+                      <td><%= shortUrl.clicks %></td>
+                    </tr>
+                
+                <% }) %> 
                             
             </tbody>
           </table>
